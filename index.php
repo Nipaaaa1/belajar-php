@@ -1,28 +1,25 @@
 <?php
 
-// Arrays
-$array = [1, 2, 3];
+// Functions
 
-// Asociative Array
-$aarray = [
-  "name" => "Nipa",
-  "job" => "Programmer"
-];
+function printLine($value) {
+  echo $value . "\n";
+}
 
-var_dump($array);
-var_dump($aarray);
+$num = 10;
 
-echo $array[0];
-echo $aarray["job"];
+printLine($num);
 
-// Manipulating array
+// Typed functions
+function add(int $val1, int $val2): int {
+  return $val1 + $val2;
+}
 
-// Add array
-$array[] = 4;
+printLine(add(5, 20));
 
-var_dump($array);
+$sum = function(int $num1, $num2): int {
+  return $num1 + $num2;
+};
 
-// Delete array item
-unset($array[1]);
+printLine($sum(5, 20));
 
-var_dump($array);
