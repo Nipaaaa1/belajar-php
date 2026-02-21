@@ -1,25 +1,46 @@
 <?php
 
-// Functions
+// Loops
 
-function printLine($value) {
-  echo $value . "\n";
+$data = [
+  [
+    "name" => "Nipa",
+    "salary" => 6000,
+    "programmer" => true
+  ],
+  [
+    "name" => "Udin",
+    "salary" => 3000,
+    "programmer" => false
+  ],
+  [
+    "name" => "Syarif",
+    "salary" => 13000,
+    "programmer" => true
+  ]
+];
+
+foreach ($data as $key => $item) {
+  var_dump($item["name"]);
+  var_dump($key);
 }
 
-$num = 10;
-
-printLine($num);
-
-// Typed functions
-function add(int $val1, int $val2): int {
-  return $val1 + $val2;
+for($i = 0; $i < 5; $i++) {
+  var_dump($i);
 }
 
-printLine(add(5, 20));
+$counter = 0;
 
-$sum = function(int $num1, $num2): int {
-  return $num1 + $num2;
-};
+while($counter < 5) {
+  var_dump($counter);
 
-printLine($sum(5, 20));
+  $counter++;
+}
 
+$counter2 = 10;
+
+do {
+  var_dump($counter2);
+
+  $counter2--;
+} while ($counter2 > 0);
